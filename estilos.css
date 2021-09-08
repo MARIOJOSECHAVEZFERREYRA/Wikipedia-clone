@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header{
+    width: 100%;
+    margin-top: 4rem;
+    text-align: center;
+}
+.wikipedia-logo img{
+    width: auto;
+    height: 60px;
+}
+.wikipedia-title img{
+    width: 155px;
+    height: auto;
+}
+main{
+    text-align: center;
+}
+.search-container{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.search-container-form{
+    width: 75%;
+    max-width: 395px;
+}
+.form-search-input{
+    display: flex;
+    position: relative;
+    border: 1px solid #afafaf;
+}
+.form-search-input:hover {
+    border: 1px solid #36c;
+}
+
+.form-search-input input{
+    height: 42px;
+    width: calc(100% - 45px);
+    min-width: 45px;
+    padding: 2px 6px;
+    border-radius: 1px;
+    font-size: 1.4rem;
+    border-style: none;
+    outline: none;
+}
+.form-search-input .language-select{
+    display: inline;
+    position: absolute;
+    top: calc(50% - 11.5px);
+    right: 5px;
+    padding: 3px;
+    margin-right: 3px;
+    padding-top: 2px;
+    cursor: pointer;
+}
+.form-search-input .language-select:active{
+    padding-top: 2px;
+    border: 1px solid  #36c;
+}
+.form-search-input .language-select label{
+    font-size: 1.3rem;
+    color: #757575;
+    margin-right: 15px;
+}
+.form-search-input .language-select select{
+    margin-right: 8px;
+    border-style: none;
+    outline: none;
+    color: none;
+    appearance: none;
+}
+.form-search-input .language-select i{
+	position: absolute;
+    right: 13px;
+    top: calc(50% - 6px);
+    width: 7px;
+    height: 7px;
+    display: block;
+    border-left: 1px solid #757575;
+    border-bottom: 1px solid #757575;
+    transform: rotate(-45deg);
+    transition: all 0.25s ease;
+}
+.form-search-button {
+    border-style: none;
+    height: 43px;
+    width: 45px;
+    cursor: pointer;
+}
+.form-search-button:hover{
+    opacity: 0.9;
+}
