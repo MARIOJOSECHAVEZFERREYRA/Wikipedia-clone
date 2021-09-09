@@ -1,3 +1,10 @@
+:root{
+    --blueWiki-color: #36c;
+    --grayWiki-color: #afafaf;
+    --whiteWiki-color: #fff;
+    --plomoLetras-color: #757575;
+    --BordeBoton-color: #a2a9b1;
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -36,10 +43,10 @@ main{
 .form-search-input{
     display: flex;
     position: relative;
-    border: 1px solid #afafaf;
+    border: 1px solid var(--grayWiki-color);
 }
 .form-search-input:hover {
-    border: 1px solid #36c;
+    border: 1px solid var(--blueWiki-color);
 }
 
 .form-search-input input{
@@ -64,7 +71,7 @@ main{
 }
 .form-search-input .language-select:active{
     padding-top: 2px;
-    border: 1px solid  #36c;
+    border: 1px solid  var(--blueWiki-color);
 }
 .form-search-input .language-select label{
     font-size: 1.3rem;
@@ -85,8 +92,8 @@ main{
     width: 7px;
     height: 7px;
     display: block;
-    border-left: 1px solid #757575;
-    border-bottom: 1px solid #757575;
+    border-left: 1px solid var(--grayWiki-color);
+    border-bottom: 1px solid var(--grayWiki-color);
     transform: rotate(-45deg);
     transition: all 0.25s ease;
 }
@@ -99,3 +106,237 @@ main{
 .form-search-button:hover{
     opacity: 0.9;
 }
+.articles-languages{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.articles-languages__containers{
+    display: block;
+    width: calc(100% / 3);
+    height: 6.4rem;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.articles-languages__containers a {
+    text-decoration: none;
+    color: var(--blueWiki-color);
+}
+.articles-languages__containers a strong{
+    display: block;
+    margin-bottom: 4px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.articles-languages__containers a small{
+    color: var(--plomoLetras-color);
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+.languages-button-wraper{
+    text-align: center;
+}
+.languages-button-wraper button{
+    display: inline;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    padding: .6rem 1.2rem;
+    outline: 1.6rem solid var(--whiteWiki-color);
+    border: 1px solid  var(--BordeBoton-color);
+    border-radius: 2px;
+    color: var(--blueWiki-color);
+    background-color: var(--whiteWiki-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1;
+    transition: outline-width .1s ease-in .5s;
+    cursor:pointer;
+}
+.languages-button-wraper button:hover{
+    border-color: var(--blueWiki-color);
+}
+.languages-button-wraper button i{
+    display: inline-block;
+    vertical-align: middle;
+    margin: auto 10px;
+}
+.languages-button-wraper button i.language-icon{
+    width: 23px;
+    height: 23px;
+    background-image: url('./Imagenes/language-icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.languages-button-wraper button i.arrow-icon{
+    width: 13px;
+    height: 13px;
+    background-image: url('./Imagenes/blue-arrow-icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.lang-list-border{
+    background-color: #c8ccd1;
+    display: block;
+    position: relative;
+    max-width: 460px;
+    width: 80%;
+    margin: -16px auto 16px;
+    margin: -1.6rem auto 1.6rem;
+    height: 1px;
+    transition: max-width .2s ease-out 400s;
+}
+main hr{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 32px;
+    clear: both;
+    border: none;
+    border-bottom: 1px solid #c8ccd1;
+}
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        padding-right: 6px;
+        padding-left: 6px;
+        margin-bottom: 50px;
+        font-size: 1.3rem;
+    }
+    footer a{
+        color: var(--blueWiki-color);
+    }
+    .footer-sidebar{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer-sidebar .wikimedia-banner__icon, .footer-sidebar .wikimedia-banner__text, .footer-sidebar.app-badges p, .app-badges__wikipedia-app{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        padding-top: 15px;
+    }
+    .footer-sidebar .wikimedia-banner__text p, .footer-sidebar.app-badges p, .app-badges__wikipedia-app strong{
+        font-size: 1.3rem;
+        line-height: 1.5;
+        color: #54595d;
+    }
+    .app-badges__wikipedia-app--icon{
+        /*La propiedad de background-image requiere de un display: inline-block*/
+        display: inline-block;
+        position: relative;
+        width: 28px;
+        height: 28px;
+        vertical-align: middle;
+        background-image: url("./Imagenes/wikimedia-icon.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .app-badges ul{
+        /*Así centras y quitas estilos de una lista*/
+        width: 100%;
+        height: auto;
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+    }
+    .app-badges ul a{
+        display: inline-block;
+        margin-top: 15px;
+    }
+    .app-badges ul i.play-store-icon a{
+        height: 38px;
+        width: 140px;
+        background-image: url("./Imagenes/google-app-icon.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .app-badges ul i.app-store-icon a{
+        height: 36px;
+        width: 115px;
+        background-image: url("./Imagenes/apple-app-icon.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .footer-other-projects{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+    }
+    .other-project{
+        width: 50%;
+        height: 9rem;
+    }
+    a.other-project__link{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        white-space: nowrap;
+    }
+    .other-project__link--icon{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    .other-project__link--icon i{
+        display: inline-block;
+        position: relative;
+        width: 48px;
+        height: 48px;
+        vertical-align: middle;
+        background-image: url('./Imagenes/Wikipedia-logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .other-project__link--text{
+        display: inline-block;
+        width: 65%;
+        vertical-align: middle;
+    }
+    .other-project__link--text span{
+        display: block;
+        white-space: normal;
+    }
+    .other-project__link--text span.paragraph{
+        color: #54595d;
+    }
+    .site-license{
+        color: #54595d;
+        text-align: center;
+        margin: auto 5px 15px;
+        padding: 5px;
+        font-size: 1.5rem;
+        line-height: 19.5px;
+    }
+    .site-license a{
+        outline: 0;
+        color: #36c;
+        text-decoration: none;
+    }
+    .site-license small::after{
+        content: "\2022";
+        font-size: 13px;
+        font-size: 1.rem;
+        line-height: inherit;
+        margin-left: 8px;
+        margin-left: .8rem;
+        margin-right: 5px;
+        margin-right: .5rem;
+        display: inline-block;
+    }
